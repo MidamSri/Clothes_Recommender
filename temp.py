@@ -5,10 +5,12 @@ import time
 import requests
 import os
 import predicting
+import shutil
 
 def main():
     # === Ask for image paths ===
     outfit = predicting.main()
+    print(outfit)
     img1 = r'C:\Users\Lenovo\OneDrive\Desktop\Midam_codes\DIS_Modara\woman.png'
     img2 = f"C:\\Users\\Lenovo\\OneDrive\\Desktop\\Midam_codes\\DIS_Modara\\assets\\tops\\{outfit[0]}"
     img3 = f"C:\\Users\\Lenovo\\OneDrive\\Desktop\\Midam_codes\\DIS_Modara\\assets\\tops\\{outfit[1]}"
@@ -68,10 +70,13 @@ def main():
     # === Download the image ===
     try:
         r = requests.get(image_url)
-        with open("result_image.webp", "wb") as f:
+        output_path = r"C:\Users\Lenovo\OneDrive\Desktop\Midam_codes\DIS_Modara\static\result_image.webp"
+        with open(output_path, "wb") as f:
             f.write(r.content)
         print("✅ Saved image to result_image.webp")
     except Exception as e:
         print("❌ Failed to download image:", e)
 
     driver.quit()
+if __name__ == "__main__":
+    main()

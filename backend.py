@@ -5,6 +5,7 @@ from fastapi.responses import JSONResponse
 import os
 import temp
 
+
 app = FastAPI()
 
 # Enable CORS for your frontend URL
@@ -26,12 +27,13 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 
 @app.get("/generate-outfit")
 async def generate_outfit():
-    # temp.main()  # Call your generation function here if needed
+    temp.main()  
 
     image_path = os.path.join("static", "result_image.webp")
     
     if os.path.exists(image_path):
         print("Image found and ready to display")
         return {"url": "http://127.0.0.1:8000/static/result_image.webp"}
+    
     else:
         return JSONResponse(content={"error": "Image not found"}, status_code=404)
