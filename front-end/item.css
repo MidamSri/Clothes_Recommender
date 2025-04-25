@@ -1,0 +1,59 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FDFFEB;
+    margin: 0;
+    padding: 20px;
+}
+
+.item-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.item-box img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #242C63;
+    margin-bottom: 10px;
+}
+
+.item-details p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.item-details select, .item-details input {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.item-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.heart-icon, .delete-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,162 @@
+body{
+    background-color:#FDFFEB;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-bottom: 50px;
+}
+
+h1{
+    font-family: 'Poppins';
+    font-size: 28px;
+    font-weight: 600;
+    color: #242C63;
+    margin: 10px;
+}
+
+.search {
+    --padding: 8px;
+
+    position: fixed; 
+    top: 10px; 
+
+    z-index: 100;
+
+    width: 90%;
+    display: flex;
+    align-items: center;
+    padding: var(--padding);
+    border-radius: 15px;
+    background: #f6f6f6;
+    width: 92%;
+    transition: background 0.25s;
+}
+
+.search:focus-within {
+    background: #f1f1f1;
+}
+
+.search-input{
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: var(--padding);
+    outline: none;
+    border: none;
+    background: transparent;
+    flex: 1;
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.search-icon {
+    color: rgba(0, 0, 0, 0.45);
+}
+
+/* first horizontal scroll */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scroll-container img {
+    height: 100%;
+    width: 90%;
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+/* Buttons to try on and view saved clothes */
+.button-container {
+    position: absolute;
+    top: 57%;
+    left: 17%;
+    display:flex;
+    gap: 20px;
+    z-index: 10px;
+}
+
+.try-on-clothes {
+    background-color: #242C63;
+    color: #FDFFEB;
+    height: 70px;
+    width: 160px;
+    padding: 10px 24px;
+    border: 2px solid #FDFFEB;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.try-on-clothes:hover {
+    background-color: #242C63;
+}
+
+.my-Closet {
+    background-color: #FDFFEB;
+    color: #242C63;
+    padding: 10px 24px;
+    border: 2px solid #242C63;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.my-Closet:hover {
+    background-color: #d8d9ca;
+}
+
+/* Reccommendations scroll */
+.scroll-container-recommendations {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    -ms-overflow-style: none; 
+}
+
+/* taskbar */
+.taskbar-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #242C63;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 100;
+}
+
+.taskbar-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #FDFFEB;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.taskbar-item .material-icons {
+    font-size: 24px; /* Adjust icon size */
+    margin-bottom: 5px; /* Add spacing between icon and label */
+    color: #FDFFEB;
+}
+
+.taskbar-item p {
+    margin: 0;
+    font-size: 12px; /* Adjust label size */
+    color: #FDFFEB;
+}

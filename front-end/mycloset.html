@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mycloset.css">
+    <script src="closet.js" defer></script>
+    <title>My Closet</title>
+</head>
+<body>
+    <!-- Search Bar -->
+    <form>
+        <div class="search">
+            <span class="search-icon material-symbols-outlined">search</span>
+            <input type="text" class="search-input" placeholder="Search">
+            <span class="search-mic material-symbols-outlined">mic</span>
+        </div>
+    </form>
+
+    <!-- Category Dropdown and Buttons -->
+    <div class="controls">
+        <select class="category-dropdown" id="categoryDropdown">
+            <option value="" disabled selected>Pick Category</option>
+            <option value="tops">Tops</option>
+            <option value="bottoms">Bottoms</option>
+            <option value="dresses">Dresses</option>
+            <option value="outfits">Outfits</option>
+        </select>
+        <button class="add-item">
+            <a href="additem.html" class="add-item-link">Add Item</a>
+        </button>
+        <button class="outfit-maker" id="outfitMakerBtn">Outfit Maker</button>
+    </div>
+
+    <!-- Clothing Items -->
+    <div class="clothing-grid" id="clothingGrid">
+        <!-- Items will be dynamically added here -->
+    </div>
+
+    <!-- Generated Outfit Image -->
+    <div id="outfitImageContainer"></div>
+
+    <!-- Taskbar -->
+    <div class="taskbar-container">
+        <div class="taskbar-item">
+            <a href="index.html" class="home-link">
+                <img src="images/home.svg" alt="Home Icon" class="taskbar-icon">
+                <p>Home</p>
+            </a>
+        </div>
+        <div class="taskbar-item">
+            <img src="images/categories.svg" alt="Categories Icon" class="taskbar-icon">
+            <p>Categories</p>
+        </div>
+        <div class="taskbar-item">
+            <a href="accountpage.html" class="account-link">
+                <img src="images/account.svg" alt="Account Icon" class="taskbar-icon">
+                <p>Account</p>
+            </a>
+        </div>
+    </div>
+
+    <!-- JS to handle Outfit Maker redirection -->
+    <script>
+        document.getElementById("outfitMakerBtn").addEventListener("click", function () {
+            window.location.href = "display-outfit.html";
+        });
+    </script>
+</body>
+</html>

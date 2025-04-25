@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="item.css">
+    <script src="item.js" defer></script>
+    <title>Item Details</title>
+</head>
+<body>
+    <div class="item-container">
+        <div class="item-box">
+            <img id="itemImage" alt="Item Image">
+        </div>
+        <h2>About</h2>
+        <div class="item-details">
+            <p><strong>Category:</strong> 
+                <select id="categorySelect">
+                    <option value="tops">Tops</option>
+                    <option value="bottoms">Bottoms</option>
+                    <option value="dresses">Dresses</option>
+                    <option value="outfits">Outfits</option>
+                </select>
+            </p>
+            <p><strong>Color:</strong> <span id="itemColor">Blue</span></p>
+            <p><strong>Description:</strong> <span id="itemDescription"></span></p>
+            <p><strong>Brand:</strong> <input type="text" id="itemBrand" placeholder="Enter Brand"></p>
+            <p><strong>Size:</strong> <input type="text" id="itemSize" placeholder="Enter Size"></p>
+            <p><strong>Date Purchased:</strong> <input type="date" id="itemDate"></p>
+        </div>
+        <div class="item-actions">
+            <img src="images/fillheart.svg" alt="Heart Icon" class="heart-icon">
+            <img src="images/delete.svg" alt="Delete Icon" id="deleteItem" class="delete-icon">
+            <button id="saveChanges" style="padding: 10px; background-color: #242C63; color: #FDFFEB; border: none; border-radius: 5px; cursor: pointer;">Save</button>
+        </div>
+    </div>
+</body>
+</html>
