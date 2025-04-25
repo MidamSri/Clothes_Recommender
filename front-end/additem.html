@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="additem.css">
+    <script src="additem.js" defer></script>
+    <title>Add Item</title>
+</head>
+<body>
+    <div class="popup">
+        <h2>Add Item</h2>
+        <div class="popup-buttons">
+            <button id="openGallery">Open Gallery</button>
+            <button id="takePic">Take a Pic</button>
+        </div>
+        <div id="imageDetails" style="display: none;">
+            <img id="previewImage" alt="Preview" style="width: 100%; margin-bottom: 10px;">
+            <select id="categorySelect">
+                <option value="" disabled selected>Select Category</option>
+                <option value="tops">Tops</option>
+                <option value="bottoms">Bottoms</option>
+                <option value="dresses">Dresses</option>
+                <option value="outfits">Outfits</option>
+            </select>
+            <input type="text" id="itemDescription" placeholder="Enter description" style="margin-top: 10px; width: 100%; padding: 10px;">
+            <button id="saveItem" style="margin-top: 10px; padding: 10px; width: 100%; background-color: #242C63; color: #FDFFEB; border: none; border-radius: 5px;">Save Item</button>
+        </div>
+    </div>
+</body>
+</html>
